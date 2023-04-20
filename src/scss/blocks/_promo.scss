@@ -1,0 +1,36 @@
+.promo {
+    min-height: 100vh;
+    position: relative;
+    background: url('../img/main_bg.jpg') no-repeat 50%/cover;
+    padding-top: 205px;
+    color: white;
+
+    .round {
+        position: relative;
+        z-index: 2;
+        @include before_circle;
+
+        &:before {
+            left: -20px;
+            top: -5px;
+        }
+    }
+
+    &__title {
+        margin-top: 10px;
+    }
+
+    &__btns {
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 25px;
+        text-align: center;
+
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+    }
+}

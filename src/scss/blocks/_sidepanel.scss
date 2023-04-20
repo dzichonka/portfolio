@@ -1,0 +1,42 @@
+.sidepanel {
+    position: relative;
+    max-width: 1140px;
+    margin: 0 auto;
+
+    &__wrapper {
+        position: absolute;
+        top: 300px;
+        left: -250px;
+        display: flex;
+        justify-content: space-between;
+        width: 340px;
+        z-index: 3;
+        color: grey;
+
+        transform: rotate(-90deg);
+    }
+
+
+    &__link {
+        transform: rotate(90deg);
+
+        svg {
+            &:hover {
+                fill: $main-color;
+            }
+        }
+    }
+
+    &__divider {
+        height: 2px;
+        width: 70px;
+        background-color: grey;
+        align-self: center;
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+}

@@ -1,0 +1,106 @@
+.education {
+    padding-top: 120px;
+    text-align: center;
+
+    &__head {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        &-title {
+            position: relative;
+            @include before_circle;
+
+            &:before {
+                left: 26px;
+            }
+
+            padding: 6px 0 0 0;
+        }
+
+        &-subtitle {
+            padding-top: 6px;
+        }
+
+    }
+
+    &__wrapper {
+        padding-top: 60px;
+        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(2, 425px);
+        column-gap: 140px;
+    }
+
+    &__column {
+        &-title {
+            position: relative;
+            padding-left: 40px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                height: 15px;
+                width: 15px;
+                border-radius: 100%;
+                background-color: $main-color;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        ul {
+            li {
+                position: relative;
+                padding-left: 45px;
+                list-style-type: none;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 1px;
+                    height: calc(100% + 20px);
+                    left: 7px;
+                    top: -13px;
+                    background-color: #000;
+                }
+            }
+        }
+    }
+
+    &__item {
+        padding-top: 45px;
+
+        &-head {
+            display: flex;
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 37px;
+                height: 1px;
+                left: -37px;
+                top: 17px;
+                background-color: #000;
+
+            }
+        }
+
+        &-round {
+            position: relative;
+            @include before_circle;
+            width: 56px;
+
+            img {
+                padding: 15px 0 0 15px;
+            }
+        }
+
+        &-descr {
+            padding-top: 12px;
+        }
+    }
+}
