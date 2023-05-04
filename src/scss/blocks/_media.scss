@@ -1,6 +1,7 @@
 @media (max-width: 1200px) {
     .container {
-        max-width: 960px;
+        width: 100vw;
+        padding: 0 20px;
     }
 
     .sidepanel {
@@ -10,20 +11,20 @@
     .promo {
         min-height: 100vh;
         padding-top: 205px;
+        padding-left: 30px;
     }
 
     .about {
         &__wrapper {
-            grid-template-columns: 400px 520px;
+
             column-gap: 40px;
         }
 
         &__skills {
             column-gap: 20px;
-            grid-template: repeat(2, minmax(115px, auto))/repeat(2, 250px);
+
 
             &-item {
-                grid-template-columns: 40px 195px;
                 column-gap: 15px;
             }
         }
@@ -31,12 +32,12 @@
 
     .skills {
         &__tech {
-            grid-template-columns: repeat(auto-fit, 310px);
+            grid-template-columns: repeat(3, 1fr);
             justify-content: center;
         }
 
         &__soft {
-            grid-template-columns: repeat(auto-fit, 270px);
+            grid-template-columns: repeat(2, 1fr);
             grid-auto-rows: minmax(70px, auto);
             justify-content: space-around;
             padding: 30px 10px;
@@ -49,12 +50,28 @@
             column-gap: 80px;
         }
     }
+
+    .portfolio {
+        &__links {
+
+            grid-template-columns: repeat(auto-fit, 280px);
+            justify-content: center;
+            gap: 35px;
+            grid-auto-rows: 280px;
+
+
+            .vertical,
+            .horizontal {
+                grid-row: unset;
+                grid-column: unset;
+            }
+
+        }
+    }
 }
 
 @media (max-width: 992px) {
-    .container {
-        max-width: 720px;
-    }
+
 
     .title {
         &_fz36 {
@@ -67,7 +84,7 @@
 
     .about {
         &__wrapper {
-            grid-template-columns: 300px 380px;
+            grid-template-columns: 30fr 38fr;
 
         }
 
@@ -80,27 +97,33 @@
             }
         }
 
-        &__skills {
-            grid-template-columns: 380px;
-            grid-auto-rows: minmax(115px, auto);
-
-            &-item {
-                grid-template-columns: 40px 320px;
-                column-gap: 20px;
-            }
-        }
     }
 
     .education {
         &__wrapper {
-            grid-template-columns: repeat(2, 320px);
+            grid-template-columns: repeat(2, 1fr);
             column-gap: 60px;
         }
     }
 
     .skills {
         &__soft {
-            grid-template-columns: repeat(auto-fit, 320px);
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    .portfolio {
+        padding-top: 60px;
+
+        &__links {
+            //grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    .contacts {
+        &__wrapper {
+
+            column-gap: 40px;
         }
     }
 
@@ -108,9 +131,6 @@
 }
 
 @media (max-width: 768px) {
-    .container {
-        max-width: 540px;
-    }
 
     .title {
         &_fz48 {
@@ -128,7 +148,7 @@
         padding-top: 40px;
 
         &__wrapper {
-            grid-template: 400px auto auto / 1fr;
+            grid-template: 480px auto auto / 1fr;
         }
 
         &__photo {
@@ -136,12 +156,27 @@
         }
 
         &__skills {
-            grid-template-columns: repeat(2, 260px);
+            grid-template-columns: repeat(2, 1fr);
 
             &-item {
-                grid-template-columns: 40px 200px;
+                grid-template-columns: 1fr 5fr;
                 column-gap: 20px;
             }
+        }
+    }
+
+
+    .contacts {
+        padding-top: 30px;
+
+        &__photo {
+            display: none;
+        }
+
+        &__wrapper {
+            grid-template: auto auto auto / 1fr;
+
+            column-gap: 40px;
         }
     }
 
@@ -165,13 +200,18 @@
             grid-template-columns: repeat(auto-fit, 230px);
         }
     }
+
+    .price {
+        &__wrapper {
+            padding: 60px 20px;
+
+            grid-template-columns: 1fr;
+
+        }
+    }
 }
 
 @media (max-width: 576px) {
-    .container {
-        width: 100%;
-        padding: 0 10px;
-    }
 
     .title {
         &_fz48 {
@@ -197,7 +237,7 @@
 
     .promo {
 
-        background: url('../img/main_bg.jpg') no-repeat 70%/cover;
+        background: url('../img/main_bg_min.jpg') no-repeat 50%/cover;
         padding-left: 15px;
 
         &__btns {
@@ -212,6 +252,10 @@
 
         &__skills {
             grid-template-columns: 1fr;
+
+            &-item {
+                grid-template-columns: 1fr;
+            }
         }
     }
 
@@ -221,7 +265,7 @@
         }
 
         &__soft {
-            grid-template-columns: repeat(auto-fit, 300px);
+            grid-template-columns: repeat(1, 1fr);
         }
     }
 }

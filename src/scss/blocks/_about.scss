@@ -3,7 +3,7 @@
 
     &__wrapper {
         display: grid;
-        grid-template-columns: 400px 670px;
+        grid-template-columns: 40fr 67fr;
         grid-template-rows: minmax(245px, auto) minmax(255px, auto);
         grid-auto-rows: minmax(245px, auto);
         column-gap: 70px;
@@ -28,17 +28,17 @@
 
     &__skills {
         display: grid;
-        grid-template-columns: repeat(2, 310px);
+        grid-template-columns: repeat(2, 31fr);
         grid-template-rows: repeat(2, minmax(120px, auto));
         grid-auto-rows: minmax(120px, auto);
-        column-gap: 50px;
+        column-gap: 5fr;
         row-gap: 20px;
     }
 
     &__skills-item {
         display: grid;
-        grid-template-columns: 40px 250px;
-        column-gap: 20px;
+        grid-template-columns: 4fr 25fr;
+        column-gap: 2fr;
 
         .about__skills-round {
             position: relative;

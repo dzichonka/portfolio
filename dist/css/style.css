@@ -544,7 +544,7 @@ template {
 }
 .about__wrapper {
   display: grid;
-  grid-template-columns: 400px 670px;
+  grid-template-columns: 40fr 67fr;
   grid-template-rows: minmax(245px, auto) minmax(255px, auto);
   grid-auto-rows: minmax(245px, auto);
   column-gap: 70px;
@@ -563,16 +563,16 @@ template {
 }
 .about__skills {
   display: grid;
-  grid-template-columns: repeat(2, 310px);
+  grid-template-columns: repeat(2, 31fr);
   grid-template-rows: repeat(2, minmax(120px, auto));
   grid-auto-rows: minmax(120px, auto);
-  column-gap: 50px;
+  column-gap: 5fr;
   row-gap: 20px;
 }
 .about__skills-item {
   display: grid;
-  grid-template-columns: 40px 250px;
-  column-gap: 20px;
+  grid-template-columns: 4fr 25fr;
+  column-gap: 2fr;
 }
 .about__skills-item .about__skills-round {
   position: relative;
@@ -757,7 +757,7 @@ template {
 .skills__tech {
   padding-top: 60px;
   display: grid;
-  grid-template-columns: repeat(4, 270px);
+  grid-template-columns: repeat(auto-fit, 270px);
   grid-template-rows: repeat(2, minmax(270px, auto));
   grid-auto-rows: minmax(270px, auto);
   column-gap: 13px;
@@ -791,6 +791,7 @@ template {
 .skills__soft-item {
   margin-top: 30px;
   display: grid;
+  width: 100%;
   height: 70px;
   grid-template-columns: repeat(2, auto);
   grid-template-rows: 55px 15px;
@@ -914,20 +915,19 @@ template {
   left: 20px;
 }
 .price__wrapper {
-  padding-top: 60px;
+  padding: 60px;
   display: grid;
-  grid-template-columns: repeat(2, minmax(auto, 400px));
+  grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: minmax(50px, auto);
   row-gap: 15px;
-  column-gap: 50px;
+  column-gap: 100px;
   justify-content: space-around;
 }
 .price__item {
   display: grid;
   grid-template-columns: repeat(2, auto);
-  grid-template-rows: 25px;
+  grid-template-rows: minmax(25px auto);
   grid-auto-rows: auto;
-  justify-content: space-between;
   align-content: space-between;
   position: relative;
 }
@@ -949,8 +949,8 @@ template {
 }
 
 .contacts {
-  padding-top: 120px;
-  padding-bottom: 90px;
+  padding-top: 60px;
+  padding-bottom: 25px;
 }
 .contacts__photo img {
   width: 100%;
@@ -968,7 +968,7 @@ template {
 .contacts__wrapper {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   column-gap: 70px;
 }
@@ -1011,7 +1011,8 @@ template {
 .contacts__form {
   margin-top: 30px;
   display: grid;
-  grid-template: 45px 190px 45px/repeat(2, 280px);
+  grid-template: 45px 190px/repeat(2, 1fr);
+  grid-auto-rows: auto;
   justify-content: space-between;
   row-gap: 27px;
   column-gap: 20px;
@@ -1038,16 +1039,21 @@ template {
 .contacts__triggers {
   grid-column: 1/3;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  justify-content: end;
 }
 .contacts__triggers span {
   padding-left: 10px;
 }
+.contacts__triggers button {
+  margin-top: 25px;
+}
 
 @media (max-width: 1200px) {
   .container {
-    max-width: 960px;
+    width: 100vw;
+    padding: 0 20px;
   }
   .sidepanel {
     display: none;
@@ -1055,25 +1061,23 @@ template {
   .promo {
     min-height: 100vh;
     padding-top: 205px;
+    padding-left: 30px;
   }
   .about__wrapper {
-    grid-template-columns: 400px 520px;
     column-gap: 40px;
   }
   .about__skills {
     column-gap: 20px;
-    grid-template: repeat(2, minmax(115px, auto))/repeat(2, 250px);
   }
   .about__skills-item {
-    grid-template-columns: 40px 195px;
     column-gap: 15px;
   }
   .skills__tech {
-    grid-template-columns: repeat(auto-fit, 310px);
+    grid-template-columns: repeat(3, 1fr);
     justify-content: center;
   }
   .skills__soft {
-    grid-template-columns: repeat(auto-fit, 270px);
+    grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: minmax(70px, auto);
     justify-content: space-around;
     padding: 30px 10px;
@@ -1082,11 +1086,19 @@ template {
     padding: 40px 20px 0 20px;
     column-gap: 80px;
   }
+  .portfolio__links {
+    grid-template-columns: repeat(auto-fit, 280px);
+    justify-content: center;
+    gap: 35px;
+    grid-auto-rows: 280px;
+  }
+  .portfolio__links .vertical,
+  .portfolio__links .horizontal {
+    grid-row: unset;
+    grid-column: unset;
+  }
 }
 @media (max-width: 992px) {
-  .container {
-    max-width: 720px;
-  }
   .title_fz36 {
     font-size: 30px;
     line-height: 42px;
@@ -1094,33 +1106,28 @@ template {
     margin-bottom: 15px;
   }
   .about__wrapper {
-    grid-template-columns: 300px 380px;
+    grid-template-columns: 30fr 38fr;
   }
   .about__photo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
-  .about__skills {
-    grid-template-columns: 380px;
-    grid-auto-rows: minmax(115px, auto);
-  }
-  .about__skills-item {
-    grid-template-columns: 40px 320px;
-    column-gap: 20px;
-  }
   .education__wrapper {
-    grid-template-columns: repeat(2, 320px);
+    grid-template-columns: repeat(2, 1fr);
     column-gap: 60px;
   }
   .skills__soft {
-    grid-template-columns: repeat(auto-fit, 320px);
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .portfolio {
+    padding-top: 60px;
+  }
+  .contacts__wrapper {
+    column-gap: 40px;
   }
 }
 @media (max-width: 768px) {
-  .container {
-    max-width: 540px;
-  }
   .title_fz48 {
     font-size: 28px;
   }
@@ -1131,17 +1138,27 @@ template {
     padding-top: 40px;
   }
   .about__wrapper {
-    grid-template: 400px auto auto/1fr;
+    grid-template: 480px auto auto/1fr;
   }
   .about__photo {
     grid-row: unset;
   }
   .about__skills {
-    grid-template-columns: repeat(2, 260px);
+    grid-template-columns: repeat(2, 1fr);
   }
   .about__skills-item {
-    grid-template-columns: 40px 200px;
+    grid-template-columns: 1fr 5fr;
     column-gap: 20px;
+  }
+  .contacts {
+    padding-top: 30px;
+  }
+  .contacts__photo {
+    display: none;
+  }
+  .contacts__wrapper {
+    grid-template: auto auto auto/1fr;
+    column-gap: 40px;
   }
   .education {
     padding-top: 40px;
@@ -1157,12 +1174,12 @@ template {
   .skills__soft {
     grid-template-columns: repeat(auto-fit, 230px);
   }
+  .price__wrapper {
+    padding: 60px 20px;
+    grid-template-columns: 1fr;
+  }
 }
 @media (max-width: 576px) {
-  .container {
-    width: 100%;
-    padding: 0 10px;
-  }
   .title_fz48 {
     font-size: 26px;
   }
@@ -1178,7 +1195,7 @@ template {
     padding-left: 20px;
   }
   .promo {
-    background: url("../img/main_bg.jpg") no-repeat 70%/cover;
+    background: url("../img/main_bg_min.jpg") no-repeat 50%/cover;
     padding-left: 15px;
   }
   .promo__btns {
@@ -1190,10 +1207,13 @@ template {
   .about__skills {
     grid-template-columns: 1fr;
   }
+  .about__skills-item {
+    grid-template-columns: 1fr;
+  }
   .skills__tech {
     grid-template-columns: repeat(auto-fit, 300px);
   }
   .skills__soft {
-    grid-template-columns: repeat(auto-fit, 300px);
+    grid-template-columns: repeat(1, 1fr);
   }
 }
