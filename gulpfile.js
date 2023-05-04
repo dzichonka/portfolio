@@ -9,6 +9,8 @@ const browsersync = require("browser-sync");
 const dist = "./dist";
 
 gulp.task("copy-html", () => {
+    gulp.src("./src/html/**/*.*")
+        .pipe(gulp.dest(dist + "/html"));
     return gulp.src("./src/index.html")
         .pipe(gulp.dest(dist))
         .pipe(browsersync.stream());

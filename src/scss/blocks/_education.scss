@@ -26,7 +26,7 @@
     }
 
     &__wrapper {
-        padding-top: 60px;
+        padding-top: 45px;
         justify-content: center;
         display: grid;
         grid-template-columns: repeat(2, 425px);
@@ -34,8 +34,11 @@
     }
 
     &__column {
+
+
         &-title {
             position: relative;
+
             padding-left: 40px;
 
             &::before {
@@ -52,6 +55,9 @@
         }
 
         ul {
+
+            margin-bottom: -45px;
+
             li {
                 position: relative;
                 padding-left: 45px;
@@ -92,7 +98,7 @@
         &-round {
             position: relative;
             @include before_circle;
-            width: 56px;
+            min-width: 56px;
 
             img {
                 padding: 15px 0 0 15px;
