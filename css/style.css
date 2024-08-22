@@ -321,7 +321,7 @@ template {
 .divider {
   height: 3px;
   width: 60px;
-  background-color: #FFA501;
+  background-color: rgba(115, 163, 132, 0.9254901961);
   margin-top: 25px;
 }
 
@@ -345,7 +345,7 @@ template {
   left: 0px;
   top: 0px;
   border-radius: 100%;
-  background: #FFA501;
+  background: rgba(115, 163, 132, 0.9254901961);
 }
 .promo .round:before {
   left: -20px;
@@ -395,7 +395,7 @@ template {
 
 .btn {
   border-radius: 1em;
-  background: #FFA501;
+  background: rgba(115, 163, 132, 0.9254901961);
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   padding: 12px 26px;
@@ -412,7 +412,7 @@ template {
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0);
 }
 .btn_transp:active {
-  color: #FFA501;
+  color: rgba(115, 163, 132, 0.9254901961);
 }
 
 .sidepanel {
@@ -441,7 +441,7 @@ template {
           transform: rotate(90deg);
 }
 .sidepanel__link svg:hover {
-  fill: #FFA501;
+  fill: rgba(115, 163, 132, 0.9254901961);
 }
 .sidepanel__divider {
   height: 2px;
@@ -479,7 +479,7 @@ template {
   display: block;
   width: 30px;
   height: 3px;
-  background: #FFA501;
+  background: rgba(115, 163, 132, 0.9254901961);
 }
 .hamburger .hamburger_long {
   width: 36px;
@@ -504,7 +504,7 @@ template {
   position: relative;
   width: 345px;
   height: 100%;
-  background-color: #FFA501;
+  background-color: rgba(115, 163, 132, 0.9254901961);
   -webkit-transition: all 0.6s;
   transition: all 0.6s;
   padding-top: 140px;
@@ -634,7 +634,7 @@ template {
   left: 0px;
   top: 0px;
   border-radius: 100%;
-  background: #FFA501;
+  background: rgba(115, 163, 132, 0.9254901961);
 }
 .about__skills-item img {
   padding: 15px 0 0 15px;
@@ -661,7 +661,7 @@ template {
   left: 0px;
   top: 0px;
   border-radius: 100%;
-  background: #FFA501;
+  background: rgba(115, 163, 132, 0.9254901961);
 }
 .about__subtitle {
   padding-top: 6px;
@@ -699,7 +699,7 @@ template {
   left: 0px;
   top: 0px;
   border-radius: 100%;
-  background: #FFA501;
+  background: rgba(115, 163, 132, 0.9254901961);
 }
 .education__head-title:before {
   left: 26px;
@@ -728,7 +728,7 @@ template {
   height: 15px;
   width: 15px;
   border-radius: 100%;
-  background-color: #FFA501;
+  background-color: rgba(115, 163, 132, 0.9254901961);
   left: 0;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -782,7 +782,7 @@ template {
   left: 0px;
   top: 0px;
   border-radius: 100%;
-  background: #FFA501;
+  background: rgba(115, 163, 132, 0.9254901961);
 }
 .education__item-round img {
   padding: 15px 0 0 15px;
@@ -822,7 +822,7 @@ template {
   left: 0px;
   top: 0px;
   border-radius: 100%;
-  background: #FFA501;
+  background: rgba(115, 163, 132, 0.9254901961);
 }
 .skills__header-title:before {
   left: 3px;
@@ -897,7 +897,7 @@ template {
   left: 0px;
   top: 0px;
   border-radius: 100%;
-  background: #FFA501;
+  background: rgba(115, 163, 132, 0.9254901961);
 }
 .skills__soft-itemtitle:before {
   left: -10px;
@@ -913,7 +913,7 @@ template {
 .skills__soft-scale span {
   display: block;
   height: 100%;
-  background-color: #FFA501;
+  background-color: rgba(115, 163, 132, 0.9254901961);
   border-radius: 4px;
 }
 
@@ -948,7 +948,7 @@ template {
   left: 0px;
   top: 0px;
   border-radius: 100%;
-  background: #FFA501;
+  background: rgba(115, 163, 132, 0.9254901961);
 }
 .portfolio__header-title:before {
   left: 14px;
@@ -1019,7 +1019,7 @@ template {
   left: 0px;
   top: 0px;
   border-radius: 100%;
-  background: #FFA501;
+  background: rgba(115, 163, 132, 0.9254901961);
 }
 .price__header-title:before {
   left: 20px;
@@ -1053,7 +1053,7 @@ template {
   width: 15px;
   height: 15px;
   border-radius: 100%;
-  background: #FFA501;
+  background: rgba(115, 163, 132, 0.9254901961);
 }
 .price__item-value {
   justify-self: end;
@@ -1105,7 +1105,7 @@ template {
   left: 0px;
   top: 0px;
   border-radius: 100%;
-  background: #FFA501;
+  background: rgba(115, 163, 132, 0.9254901961);
 }
 .contacts__subtitle {
   margin-top: 6px;
@@ -1123,11 +1123,9 @@ template {
   width: 30px;
   height: 30px;
   margin-right: 25px;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
 }
 .contacts__link svg:hover {
-  fill: #FFA501;
+  fill: rgba(115, 163, 132, 0.9254901961);
 }
 .contacts__form {
   margin-top: 30px;
