@@ -1123,8 +1123,6 @@ template {
   width: 30px;
   height: 30px;
   margin-right: 25px;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
 }
 .contacts__link svg:hover {
   fill: rgba(115, 163, 132, 0.9254901961);
