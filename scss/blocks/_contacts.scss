@@ -1,0 +1,124 @@
+.contacts {
+    padding-top: 60px;
+    padding-bottom: 25px;
+
+
+
+    &__photo {
+        img {
+            border-radius: 2em;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    label {
+        position: absolute;
+        top: -10px;
+        left: 10px;
+        background-color: #fff;
+        padding: 0 10px;
+        height: 18px;
+
+    }
+
+
+    &__wrapper {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+
+        column-gap: 70px;
+
+    }
+
+    &__title {
+        position: relative;
+        @include before_circle;
+        padding: 8px 0 0 20px;
+    }
+
+    &__subtitle {
+        margin-top: 6px;
+    }
+
+    &__divider {
+        margin-top: 4px;
+    }
+
+    &__text {
+        padding-top: 20px;
+    }
+
+    &__links {
+        padding-top: 20px;
+    }
+
+    &__link {
+        svg {
+            width: 30px;
+            height: 30px;
+            margin-right: 25px;
+            //transform: rotate(90deg);
+
+            &:hover {
+                fill: $main-color;
+            }
+        }
+    }
+
+    &__form {
+        margin-top: 30px;
+        display: grid;
+        grid-template: 45px 190px/ repeat(2, 1fr);
+        grid-auto-rows: auto;
+        justify-content: space-between;
+        row-gap: 27px;
+        column-gap: 20px;
+    }
+
+    &__input {
+        position: relative;
+
+        input {
+            border-radius: 1em;
+            width: 100%;
+            height: 100%;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+
+    &__message {
+        grid-column: 1/3;
+        position: relative;
+
+        textarea {
+            border-radius: 1em;
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            resize: none;
+        }
+    }
+
+    &__triggers {
+        grid-column: 1/3;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        justify-content: end;
+
+        span {
+            padding-left: 10px;
+        }
+
+        button {
+            margin-top: 25px;
+        }
+    }
+
+
+}
